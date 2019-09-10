@@ -1,0 +1,14 @@
+#main {
+    display: flex;
+    min-height: 21.1875rem;
+    padding: 1em;
+    > aside {
+        flex: 0 0 20vw;
+    }
+}
+header, footer, article, nav {
+    padding: 1em;
+}
+header, footer {
+    height: 3.5rem;
+}    

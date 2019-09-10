@@ -1,12 +1,22 @@
 <template >
   <div>
-    <p>Here's the base Layout</p>
-    <router-view></router-view>
+    <IntHeader />
+    <main id="main">
+      <router-view></router-view>
+    </main>
+    <IntFooter />
   </div>
 </template>
 
 <script>
-export default {};
+import IntHeader from "@/components/organisms/IntHeader";
+import IntFooter from "@/components/organisms/IntFooter";
+export default {
+  components: {
+    IntHeader,
+    IntFooter
+  }
+};
 </script>
 
 <style lang="scss">

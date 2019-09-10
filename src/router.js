@@ -1,8 +1,5 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import baseLayout from 'Layouts/base'
-import CompanyPage from 'Pages/company'
-import CompanyDataPage from 'Pages/company/data'
 
 Vue.use(Router)
 
@@ -14,17 +11,17 @@ export default new Router({
             path: '/',
             name: 'app',
             redirect: 'company',
-            component: baseLayout,
+            component: () => import('Layouts/base'),
             children: [
                 {
                     path: '/company',
                     name: 'company',
-                    component: CompanyPage,
+                    component: () => import('Pages/company'),
                 },
                 {
                     path: '/company-data',
                     name: 'company-data',
-                    component: CompanyDataPage,
+                    component: () => import('Pages/company/data'),
                 }
             ]
         }
